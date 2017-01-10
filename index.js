@@ -9,7 +9,7 @@ let app = express();
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
-app.use(express.static('./public'));
+app.use(express.static(`${__dirname}/public`));
 
 app.get('/hi', (req, res) => {
   res.send({message:"🐼", remark:"hi 🌍"});
